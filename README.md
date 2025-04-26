@@ -12,3 +12,13 @@ Automate leadership email summaries using n8n and AI agents.
 - n8n
 - OpenRouter.ai
 - Notion API
+
+## System Architecture (Mermaid Diagram)
+
+```mermaid
+flowchart TD
+    A[Gmail API] -->|Fetch leadership emails| B[n8n Workflow]
+    B --> C[Filter by subject: "Leadership tip of the week"]
+    C --> D[Send email body to OpenRouter (GPT model)]
+    D --> E[Summarize the content]
+    E --> F[Post the summarized tip to Notion or Slack]
