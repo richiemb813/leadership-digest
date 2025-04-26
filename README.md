@@ -18,7 +18,7 @@ Automate leadership email summaries using n8n and AI agents.
 ```mermaid
 flowchart TD
     A[Gmail API] -->|Fetch leadership emails| B[n8n Workflow]
-    B --> C[Filter by subject: "Leadership tip of the week"]
+    B --> C[Filter by subject: Leadership_tip_of_the_week]
     C --> D[Send email body to OpenRouter (GPT model)]
     D --> E[Summarize the content]
     E --> F[Post the summarized tip to Notion or Slack]
